@@ -4,7 +4,13 @@ version = "0.1.0"
 edition = "2018"
 links = "nvblas"
 license = "MIT"
-
+readme = "README.md"
+homepage = "https://github.com/gfaster/nvblas-sys"
+repository = "https://github.com/gfaster/nvblas-sys.git"
+documentation = "https://github.com/gfaster/nvblas-sys/blob/main/README.md"
 description = "This package provides linkage to NVBLAS"
+
+categories = ["external-ffi-bindings", "science"]
+keywords = ["linear-algebra"]
 
 [dependencies]

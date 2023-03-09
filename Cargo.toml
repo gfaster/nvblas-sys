@@ -1,0 +1,10 @@
+[package]
+name = "nvblas-sys"
+version = "0.1.0"
+edition = "2018"
+links = "nvblas"
+license = "MIT"
+
+description = "This package provides linkage to NVBLAS"
+
+[dependencies]

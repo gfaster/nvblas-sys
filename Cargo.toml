@@ -14,3 +14,7 @@ categories = ["external-ffi-bindings", "science"]
 keywords = ["linear-algebra"]
 
 [dependencies]
+libc = { version = "0.2", optional = true }
+
+[features]
+standalone = ["dep:libc"]

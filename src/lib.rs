@@ -39,3 +39,7 @@
 //! [nvblas]: https://docs.nvidia.com/cuda/nvblas/
 
 #![no_std]
+
+
+#[cfg(feature = "standalone")]
+pub mod standalone;

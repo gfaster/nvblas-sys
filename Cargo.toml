@@ -1,13 +1,13 @@
 [package]
 name = "nvblas-sys"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2018"
 links = "nvblas"
 license = "MIT"
 readme = "README.md"
 homepage = "https://github.com/gfaster/nvblas-sys"
 repository = "https://github.com/gfaster/nvblas-sys.git"
-documentation = "https://github.com/gfaster/nvblas-sys/blob/main/README.md"
+documentation = "https://docs.rs/nvblas-sys/"
 description = "This package provides linkage to NVBLAS"
 
 categories = ["external-ffi-bindings", "science"]

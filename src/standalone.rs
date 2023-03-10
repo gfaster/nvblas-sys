@@ -4,7 +4,7 @@
 //! and not link to a traditional BLAS implementation.
 //!
 //! This module is a subset of [`blas-sys`][blassys]. If you need to use BLAS
-//! routines not in [level 3][lvl3], include [`blas-sys`][blassys] instead of 
+//! routines not in [level 3][lvl3], include [`blas-sys`][blassys] instead of
 //! using the `standalone` feature.
 //!
 //! [blassys]: https://crates.io/crates/blas-sys

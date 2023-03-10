@@ -44,4 +44,6 @@ the need for [`blas-sys`][blassys] or any CPU BLAS implementation.
 [override]: https://doc.rust-lang.org/cargo/reference/build-scripts.html#overriding-build-scripts
 [nvblas]: https://docs.nvidia.com/cuda/nvblas/
 [lvl3]: https://netlib.org/blas/#_level_3
+[lvl2]: https://netlib.org/blas/#_level_2
+[lvl1]: https://netlib.org/blas/#_level_1
 [blassys]: https://crates.io/crates/blas-sys

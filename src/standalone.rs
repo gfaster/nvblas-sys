@@ -1,3 +1,13 @@
+//! Standalone declarations for the functions supported by NVBLAS.
+//!
+//! If you only need level 3 BLAS routines, you can just link to NVBLAS
+//! and not link to a traditional BLAS implementation.
+//!
+//! This module is a subset of [`blas-sys`][blassys]. If you need to use BLAS
+//! routines not in level 3, include [`blas-sys`][blassys] instead of using
+//! the `standalone` feature.
+//!
+//! [blassys]: https://crates.io/crates/blas-sys
 extern crate libc;
 
 use libc::{c_char, c_double, c_float, c_int};

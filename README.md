@@ -31,9 +31,17 @@ Alternatively, you can set the environment variable `NVBLAS_CONFIG_FILE`
 manually.
 
 Since [NVBLAS][nvblas] is a limited drop-in replacement to traditional CPU BLAS
-implementations, nvblas-sys does not provide any declarations; you will also
-need to include `blas-sys` as a dependency.
+implementations, nvblas-sys does not provide any declarations by default. if you
+want to use any [level 2][lvl2] or [level 1][lvl1] functions, you'll need to
+include `blas-sys` as a dependency. 
+
+If you just need the [level 3][lvl3] operations, you can use the `standalone`
+feature. The `standalone` feature includes just the level 3 function 
+declarations copied from [`blas-sys`][blassys] so you can use NVBLAS without
+the need for [`blas-sys`][blassys] or any CPU BLAS implementation.
 
 [configtoml]: https://doc.rust-lang.org/cargo/reference/config.html
 [override]: https://doc.rust-lang.org/cargo/reference/build-scripts.html#overriding-build-scripts
 [nvblas]: https://docs.nvidia.com/cuda/nvblas/
+[lvl3]: https://netlib.org/blas/#_level_3
+[blassys]: https://crates.io/crates/blas-sys

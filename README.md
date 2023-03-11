@@ -20,16 +20,6 @@ Make sure to invoke the crate to make sure it runs:
 extern crate nvblas-sys;
 ```
 
-nvblas-sys comes with a default configuration file, but it may not be may not be
-acceptable for your usage. To use your own configuration file, include the
-following line in your `build.rs` file:
-```rust
-println!("cargo:rustc-env=NVBLAS_CONFIG_FILE={}/nvblas.conf",
-          env::var("CARGO_MANIFEST_DIR").unwrap());
-```
-Alternatively, you can set the environment variable `NVBLAS_CONFIG_FILE`
-manually.
-
 Since [NVBLAS][nvblas] is a limited drop-in replacement to traditional CPU BLAS
 implementations, nvblas-sys does not provide any declarations by default. if you
 want to use any [level 2][lvl2] or [level 1][lvl1] functions, you'll need to
@@ -39,6 +29,18 @@ If you just need the [level 3][lvl3] operations, you can use the `standalone`
 feature. The `standalone` feature includes just the level 3 function 
 declarations copied from [`blas-sys`][blassys] so you can use NVBLAS without
 the need for [`blas-sys`][blassys] or any CPU BLAS implementation.
+
+## Config File
+
+nvblas-sys comes with a default configuration file, but it may not be may not be
+acceptable for your usage. To use your own configuration file, include the
+following line in your `build.rs` file:
+```rust
+println!("cargo:rustc-env=NVBLAS_CONFIG_FILE={}/nvblas.conf",
+          env::var("CARGO_MANIFEST_DIR").unwrap());
+```
+Alternatively, you can set the environment variable `NVBLAS_CONFIG_FILE`
+manually.
 
 [configtoml]: https://doc.rust-lang.org/cargo/reference/config.html
 [override]: https://doc.rust-lang.org/cargo/reference/build-scripts.html#overriding-build-scripts

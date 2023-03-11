@@ -1,6 +1,6 @@
 [package]
 name = "nvblas-sys"
-version = "0.1.1"
+version = "0.2.0"
 edition = "2018"
 links = "nvblas"
 license = "MIT"
@@ -8,7 +8,7 @@ readme = "README.md"
 homepage = "https://github.com/gfaster/nvblas-sys"
 repository = "https://github.com/gfaster/nvblas-sys.git"
 documentation = "https://docs.rs/nvblas-sys/"
-description = "This package provides linkage to NVBLAS"
+description = "This package provides linkage as well as optional bindings and configuration for NVBLAS"
 
 categories = ["external-ffi-bindings", "science"]
 keywords = ["linear-algebra"]
@@ -18,3 +18,4 @@ libc = { version = "0.2", optional = true }
 
 [features]
 standalone = ["dep:libc"]
+configfile = []
